@@ -12,7 +12,7 @@ import MainTarBar from 'components/content/maintarbar/MainTarBar.vue'
 export default {
   name: 'App',
   components: {
-    MainTarBar
+    MainTarBar,
   }
 }
 </script>

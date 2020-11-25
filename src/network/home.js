@@ -6,3 +6,8 @@ export function getHomeMultidata() {
   })
 }
 
+// export function getHomeMultiData() {
+//   return request({
+//     url:'/test/getBanners'
+//   });
+// }
