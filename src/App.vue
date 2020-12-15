@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <!-- <router-view></router-view>  和下面效果一样-->
-    <router-view/>
+    <!-- keepalive是为了让路由跳转后不销毁，可使用active和deactive函数 -->
+    <keep-alive> 
+      <router-view/>
+    </keep-alive>
     <main-tar-bar/>
   </div>
 </template>

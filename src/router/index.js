@@ -33,16 +33,16 @@ const routes = [
   },
 ]
 
-const router = new Router({
-  routes,
-  mode:'history'
-})
-
 //下面的代码是避免重复点击路由报错（虽然对项目没什么影响，但不好看）
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
 }
+
+const router = new Router({
+  routes,
+  mode:'history'
+})
 
 export default router 
 
