@@ -2,10 +2,10 @@
   <div id="app">
     <!-- <router-view></router-view>  和下面效果一样-->
     <!-- keepalive是为了让路由跳转后不销毁，可使用active和deactive函数 -->
-    <keep-alive> 
+    <keep-alive exclude="Detail"> 
       <router-view/>
     </keep-alive>
-    <main-tar-bar/>
+    <main-tar-bar v-show="$route.meta.navShow"/>
   </div>
 </template>
 

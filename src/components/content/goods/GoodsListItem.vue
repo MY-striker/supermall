@@ -1,5 +1,5 @@
 <template>
-  <div class="goods-item" >
+  <div class="goods-item" @click="itemClick">
     <img  :src="goodItem.show.img" alt="">
      <!-- <img @load="imgLoad" v-lazy="ShowImage" :src="goodItem.show.img" alt=""> -->
     <div class="goods-info">
@@ -21,6 +21,12 @@ export default {
       }
     }
   },
+  methods: {
+    itemClick() {
+      //this.$router.push('/detail' + 111) 
+      this.$router.push('/detail/' + this.goodItem.iid)
+    }
+  }
   // created() {
   //   console.log(this.props.goodItem);
   // }

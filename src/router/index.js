@@ -8,6 +8,7 @@ const Home = ()=> import('../views/home/Home')
 const Category = ()=> import('../views/category/Category')
 const Cart = ()=> import('../views/cart/Cart')
 const Profile = ()=> import('../views/profile/Profile')
+const Detail = ()=> import('../views/detail/Detail')
 
 //2创建router
 const routes = [
@@ -17,19 +18,28 @@ const routes = [
   },
   {
     path:'/home',
-    component: Home
+    component: Home,
+    meta: { navShow: true, cname: '一级页面' },
   },
   {
     path:'/category',
-    component: Category
+    component: Category,
+    meta: { navShow: true, cname: '一级页面' },
   },
   {
     path:'/cart',
-    component: Cart
+    component: Cart,
+    meta: { navShow: true, cname: '一级页面' },
   },
   {
     path:'/profile',
-    component: Profile
+    component: Profile,
+    meta: { navShow: true, cname: '一级页面' },
+  },
+  {
+    path:'/detail/:iid' ,
+    component: Detail,
+    meta: { navShow: false, cname: '二级页面' },
   },
 ]
 
