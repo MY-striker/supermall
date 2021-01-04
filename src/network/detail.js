@@ -21,4 +21,12 @@ export class Goods{
   }
 }
 
+ 
 
+export class GoodsParam {
+  constructor(info, rule) {
+    this.image = info.images ? info.images[0] : ''
+    this.infos = info.set
+    this.sizes = rule.tables 
+  }
+}
